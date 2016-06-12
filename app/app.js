@@ -1,15 +1,18 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+var app = angular.module('myApp', [
   'ngRoute',
+  'ngStorage',
   'myApp.view1',
   'myApp.view2',
   'myApp.view3',
   'myApp.login',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+  'myApp.version',
+  'myApp.LocalData'
+]);
+
+app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
       //$routeProvider
@@ -25,5 +28,20 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
       //  redirectTo: '/customers'
       //});
   $routeProvider.otherwise({redirectTo: '/view3'});
+
+
+}]);
+
+app.controller('InitialCtrl', ['$scope', '$localStorage', function($scope, $localStorage) {
+    $localStorage.$default({
+        name: "Lomanda Salim Hussain",
+        students: [
+            {name: "Rasheed Waajid", present: false},
+            {name: "Tariq Ali", present: false},
+            {name: "Salim Hussain", present: false}
+        ]
+    });
+
+    //$scope.$storage = $localStorage;
 
 }]);

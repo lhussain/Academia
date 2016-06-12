@@ -1,1 +1,12 @@
-<p>This is the partial for view 3.</p>
+<div ng-controller="View3Ctrl">
+    <p>This is the partial for view 3.</p>
+    <p>My name is: {{fullName}}</p>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item active">Students</a>
+        <a href="#" class="list-group-item"
+           ng-repeat="student in students">{{student.name}}
+            <button class="btn-default" ng-class="{on_present:student.present}" style="float: right;" ng-click="studentPresent(student.name)">Present</button>
+            <button class="btn-default" ng-class="{on_absent:!student.present}" style="float: right" ng-click="studentAbsent(student.name)">Absent</button></a>
+    </div>
+</div>

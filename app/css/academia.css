@@ -29,3 +29,11 @@ footer {
     }
     .row.content {height:auto;}
 }
+
+button.on_present {
+    background-color: green;
+}
+
+button.on_absent {
+    background-color: red;
+}

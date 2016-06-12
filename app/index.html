@@ -12,18 +12,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ng-storage/ngStorage.js"></script>
     <script src="app.js"></script>
     <script src="view1/view1.js"></script>
     <script src="view2/view2.js"></script>
     <script src="view3/view3.js"></script>
     <script src="login/login.js"></script>
+    <script src="data/dataModel.js"></script>
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
-<body>
+
+<body ng-controller="InitialCtrl">
     <div>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -33,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Logo</a>
+                    <a class="navbar-brand" href="#"><img src="images/5620161464466_NITI-Final-Logo.png" height="35px"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
